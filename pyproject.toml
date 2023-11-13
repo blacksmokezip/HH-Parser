@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "hh-parser"
+version = "0.1.0"
+description = ""
+authors = ["blacksmokezip <hanzomainer1488@gmail.com>"]
+readme = "README.md"
+packages = [{include = "parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.12.2"
+selenium = "^4.15.2"
+argparse = "^1.4.0"
+fake-useragent = "^1.3.0"
+lxml = "^4.9.3"
+progress = "^1.6"
+
+[tool.poetry.scripts]
+parse_vacancies = "parser.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
